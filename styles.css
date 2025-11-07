@@ -12,6 +12,13 @@ header {
 
 }
 
+.logout_btn {
+    text-align: left;    
+    margin: 0;           
+    width: fit-content;  
+    padding: 10px;     
+}
+
 .main_header {
     text-align: center;
     font-family: 'Brygada 1918', serif;

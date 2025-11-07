@@ -67,3 +67,15 @@ input[type=text]:focus, input[type=password]:focus {
     background-color: #ddd;
     outline: none;
 }
+
+.submit_flash {
+    text-align: left;    
+    margin: 0;           
+    width: fit-content;  
+    padding: 10px;       
+}
+
+.submit_flash .flash_submit_btn {
+    text-align: left;
+    margin: 0;
+}

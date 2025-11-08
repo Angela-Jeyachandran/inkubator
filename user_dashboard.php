@@ -7,6 +7,7 @@ if (!isset($_SESSION['username'])) {
 ?>
 <!DOCTYPE html>
 <html>
+<link rel="stylesheet" href="styles.css?v=4">
 <head><title>Dashboard</title></head>
 <body>
 <h2>Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?>!</h2>

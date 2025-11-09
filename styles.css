@@ -78,6 +78,10 @@ button {
     transition: 0.3s;
 }
 
+button:hover{
+    background-color: #5b2217;
+}
+
 input[type=text], input[type=password] {
     width: 100%;
     padding: 15px;
@@ -136,3 +140,85 @@ img {
     font-size: 0.9em;
     color: #333;
 }
+
+
+
+/* CLient Dashboard Styling */
+
+.dashboard-header {
+    text-align: center;
+    padding: 40px 20px;
+    border-bottom: 2px solid #ddd;
+}
+
+.dashboard-header h2 {
+    font-size: xx-large;
+    margin-bottom: 5px;
+}
+
+.dashboard-header p {
+    font-size: large;
+    color: #555;
+}
+
+/* Navigation Bar */
+.main-nav {
+    text-align: center;
+    padding: 20px 0;
+    background-color:#863525;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0 15px;
+    padding: 5px 10px;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 6px;
+}
+
+.main-nav a:hover {
+    background-color: #863525;
+    color: #f5ebe6;
+}
+
+.dashboard-content {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.bookmarked-section h3 {
+    text-align: center;
+    font-size: x-large;
+    margin-bottom: 30px;
+}
+
+.tattoo-section {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.tattoo-section p {
+    font-size: large;
+    color: #777;
+}
+
+.explore-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #863525;
+    color: white;
+    font-family: 'Brygada 1918', serif;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.explore-btn:hover {
+    background-color: #5b2217;
+}
+

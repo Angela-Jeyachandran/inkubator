@@ -62,7 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['image'])) {
    </head>
     <header>
     <div class="logout_btn">
-        <form action="artist_logout.php">
+        <form action="user_logout.php">
             <button class="logout_btn" type="submit">Logout</button>
         </form>
     </div>

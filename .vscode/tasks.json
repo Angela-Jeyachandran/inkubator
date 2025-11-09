@@ -1,0 +1,17 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Start PHP Server",
+        "type": "shell",
+        "command": "php -S localhost:8000",
+        "problemMatcher": [],
+        "isBackground": true,
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        }
+      }
+    ]
+  }
+  

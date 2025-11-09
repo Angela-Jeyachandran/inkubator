@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $users = file_exists($usersFile) ? json_decode(file_get_contents($usersFile), true) : [];
 
-    if (isset($users[$username]) && password_verify($password, $users[$username])) {
+    if (isset($users[$username]) && password_verify($password, $users[$username]['password'])) {
         $_SESSION['username'] = $username;
         header('Location: user_dashboard.php');
         exit;
@@ -19,15 +19,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 <!DOCTYPE html>
 <html>
-<head><title>Login</title></head>
+<head>
+    <link rel="stylesheet" href="styles.css?v=4">
+    <title>Client Login</title>
+</head>
+<header>
+    <h1>Client Login</h1>
+</header>
+<br>
 <body>
-<h2>Login</h2>
-<?php if(isset($error)) echo "<p style='color:red;'>$error</p>"; ?>
+<?php // if(isset($error)) echo "<p style='color:red;'>$error</p>"; ?>
 <form method="POST">
-    Username: <input type="text" name="username"><br><br>
-    Password: <input type="password" name="password"><br><br>
+    <label for="username"><b>Username</b></label>
+    <input type="text" name="username" placeholder="Enter username" required>
+    <br>
+    <br>
+    <label for="password"><b>Password</b></label>
+    <input type="password" name="password" placeholder="Enter password" required>
+    <br>
+    <br>
     <button type="submit">Login</button>
 </form>
-<p><a href="user_register.php">Register</a></p>
+<!--<p><a href="register.php">Register</a></p>-->
 </body>
 </html>

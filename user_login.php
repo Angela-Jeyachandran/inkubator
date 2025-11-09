@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (isset($users[$username]) && password_verify($password, $users[$username])) {
         $_SESSION['username'] = $username;
-        header('Location: dashboard.php');
+        header('Location: user_dashboard.php');
         exit;
     } else {
         $error = "Invalid login.";
@@ -28,6 +28,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     Password: <input type="password" name="password"><br><br>
     <button type="submit">Login</button>
 </form>
-<p><a href="register.php">Register</a></p>
+<p><a href="user_register.php">Register</a></p>
 </body>
 </html>

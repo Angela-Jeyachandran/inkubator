@@ -8,9 +8,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $users = file_exists($usersFile) ? json_decode(file_get_contents($usersFile), true) : [];
 
-    if (isset($users[$username]) && password_verify($password, $users[$username])) {
+    if (isset($users[$username]) && password_verify($password, $users[$username]['password'])) {
         $_SESSION['username'] = $username;
-        header('Location: dashboard.php');
+        header('Location: artist_dashboard.php');
         exit;
     } else {
         $error = "Invalid login.";

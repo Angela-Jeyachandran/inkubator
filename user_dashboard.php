@@ -16,13 +16,18 @@ $bookmarked = [];
 </head>
 <body>
 <header class="dashboard-header">
+    <div class="logout_btn">
+        <form action="user_logout.php">
+            <button class="logout_btn" type="submit">Logout</button>
+        </form>
+    </div>
     <h2>Welcome back, <?php echo htmlspecialchars($_SESSION['username']); ?>!</h2>
     <p><?php echo count($bookmarked); ?> saved tattoos</p>
 </header>
 
 <nav class="main-nav">
     <a href="explore.php">Explore</a>
-    <a href="logout.php">Logout</a>
+    <a href="tattoo_search.php">Find Your Next Ink</a>
     <a href="logout.php">Messages</a>
 </nav>
 

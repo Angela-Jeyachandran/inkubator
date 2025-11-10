@@ -222,3 +222,20 @@ img {
     background-color: #5b2217;
 }
 
+
+/* Tattoo search results */
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.result-item {
+    text-align: center;
+}
+
+.result-item img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 8px;
+}

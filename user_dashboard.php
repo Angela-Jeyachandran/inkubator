@@ -26,7 +26,7 @@ $bookmarked = [];
 </header>
 
 <nav class="main-nav">
-    <a href="explore.php">Explore</a>
+    <a href="about.html">About</a>
     <a href="tattoo_search.php">Find Your Next Ink</a>
     <a href="logout.php">Messages</a>
 </nav>

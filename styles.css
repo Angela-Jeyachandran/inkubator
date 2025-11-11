@@ -13,6 +13,17 @@ header {
 
 }
 
+.welcome_logo img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 0;
+    clip-path: inset(3px);
+}
+
 .logout_btn {
     text-align: left;    
     margin: 0;           

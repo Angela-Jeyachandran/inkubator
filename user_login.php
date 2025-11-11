@@ -1,5 +1,8 @@
 <?php
+ini_set('session.cookie_path', '/');
+session_name('inkubator_session');
 session_start();
+
 $usersFile = 'users.json';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

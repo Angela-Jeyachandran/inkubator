@@ -1,4 +1,17 @@
 <?php
+// Keeps session consistent across the pages 
+ini_set('session.cookie_path', '/');
+session_name('inkubator_session');
+session_start();
+// Debug statement
+// echo "<p>DEBUG SESSION: " . ($_SESSION['username'] ?? 'NONE') . "</p>";
+
+// If not logged in goes to home page
+if (!isset($_SESSION['username'])) {
+    header('Location: index.html');
+    exit;
+}
+
 $metaFile = 'uploads/meta.json';
 $results = [];
 $queryRaw = isset($_GET['q']) ? $_GET['q'] : '';
@@ -56,7 +69,7 @@ if (!empty($queries) && !empty($metaData)) {
 <body>
     <header>
         <div class="logout_btn">
-            <form action="user_logout.php">
+            <form action="user_logout.php" method="post">
                 <button class="logout_btn" type="submit">Logout</button>
             </form>
         </div>
@@ -89,6 +102,11 @@ if (!empty($queries) && !empty($metaData)) {
                         <img src="uploads/<?php echo htmlspecialchars($item['filename'], ENT_QUOTES); ?>" alt="">
                         <p><strong>By:</strong> <?php echo isset($item['username']) ? htmlspecialchars($item['username']) : 'Unknown'; ?></p>
                         <p><strong>Keywords:</strong> <?php echo htmlspecialchars(implode(', ', $item['keywords']), ENT_QUOTES); ?></p>
+                        <!-- Bookmarking -->
+                        <form action="bookmark.php" method="POST">
+                            <input type="hidden" name="filename" value="<?php echo htmlspecialchars($item['filename'], ENT_QUOTES); ?>">
+                            <button type="submit">Bookmark</button>
+                        </form>
                     </div>
                 <?php endforeach; ?>
             </div>

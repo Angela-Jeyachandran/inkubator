@@ -14,5 +14,13 @@
     "leche": {
         "password": "$2y$12$4U4k\/B9jDRlFr52qPx\/Oo.zaSUEFILBdOs5LJm0xGbJWsdkNe9mkq",
         "email": "lechebunny@gmail.com"
+    },
+    "artist": {
+        "password": "$2y$12$6zlRymJ7TrzVzhe7Nrgaa.CJyAaEgVaiS6lz1Ksq4y2CpKdilXFvm",
+        "email": "artist@gmail.com"
+    },
+    "client": {
+        "password": "$2y$12$SGZe4QJVdnFCfeJxEyQeJ.aRzupU0J5c9ILBprnyAOgYJE2Xzoswq",
+        "email": "client@gmail.com"
     }
 }

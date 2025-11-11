@@ -24,6 +24,11 @@ header {
     clip-path: inset(3px);
 }
 
+img {
+    clip-path: inset(3px);
+
+}
+
 .logout_btn {
     text-align: left;    
     margin: 0;           

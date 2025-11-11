@@ -35,8 +35,8 @@ $bookmarked = [];
     <section class="bookmarked-section">
     <h3>My Saved Tattoos</h3>
         <div class="tattoo-section">
-        <p>You haven’t saved any tattoos yet.</p>
-        <a href="explore.php" class="explore-btn">Start saving ideas</a>
+            <p>You haven’t saved any tattoos yet.</p>
+            <a href="tattoo_search.php" class="explore-btn">Start saving ideas</a>
         </div>
     </section>
 </main>

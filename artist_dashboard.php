@@ -61,19 +61,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['image'])) {
     <title><?php echo htmlspecialchars($_SESSION['username']); ?>'s Dashboard</title>
    </head>
     <header>
-    <div class="logout_btn">
-        <form action="user_logout.php">
-            <button class="logout_btn" type="submit">Logout</button>
-        </form>
-    </div>
+        <div class="logout_btn">
+            <form action="user_logout.php">
+                <button class="logout_btn" type="submit">Logout</button>
+            </form>
+        </div>
+        <img src="inkubator_logo.png" alt="logo" width="350" height="100">
+
         <h1><?php echo htmlspecialchars($_SESSION['username']); ?>'s Dashboard</h1> 
+
+        <nav class="main-nav">
+            <a href="about.html">About</a>
+            <a href="tattoo_search.php">Find Your Next Ink</a>
+            <a href="logout.php">Messages</a>
+        </nav>
     </header>
 </br>
 <body>
-<h2>Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?>!</h2>
-<p>This is your dashboard.</p>
-<br><br>
-
 <?php if ($error) echo "<p style='color:red;'>$error</p>"; ?>
 <?php if ($success) echo "<p style='color:green;'>$success</p>"; ?>
 

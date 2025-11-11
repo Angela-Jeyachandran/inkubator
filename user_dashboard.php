@@ -21,15 +21,17 @@ $bookmarked = [];
             <button class="logout_btn" type="submit">Logout</button>
         </form>
     </div>
+    <img src="inkubator_logo.png" alt="logo" width="350" height="100">
+
     <h2>Welcome back, <?php echo htmlspecialchars($_SESSION['username']); ?>!</h2>
     <p><?php echo count($bookmarked); ?> saved tattoos</p>
-</header>
 
-<nav class="main-nav">
+    <nav class="main-nav">
     <a href="about.html">About</a>
     <a href="tattoo_search.php">Find Your Next Ink</a>
     <a href="logout.php">Messages</a>
 </nav>
+</header>
 
 <main class="dashboard-content">
     <section class="bookmarked-section">

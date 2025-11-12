@@ -98,6 +98,13 @@ if (!empty($queries) && !empty($metaData)) {
 
     <hr>
 
+    <!--Success message shown when saved-->
+    <?php if (isset($_GET['success']) && $_GET['success'] == '1'): ?>
+        <div class="success-message">
+            Bookmark saved successfully!
+        </div>
+    <?php endif; ?>
+
     <?php if ($query !== ''): ?>
         <h2>Results for "<?php echo htmlspecialchars($queryRaw, ENT_QUOTES); ?>"</h2>
 

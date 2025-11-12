@@ -44,9 +44,9 @@ file_put_contents($bookmarksFile, json_encode($data, JSON_PRETTY_PRINT));
 
 // Keeps on search page
 if (!empty($_SERVER['HTTP_REFERER']) && str_contains($_SERVER['HTTP_REFERER'], 'tattoo_search.php')) {
-    header('Location: ' . $_SERVER['HTTP_REFERER']);
+    header('Location: ' . strtok($_SERVER['HTTP_REFERER'], '?') . '?success=1');
 } else {
-    header('Location: tattoo_search.php');
+    header('Location: tattoo_search.php?success=1');;
 }
 exit;
 

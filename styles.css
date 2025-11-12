@@ -278,3 +278,20 @@ img {
 .login-prompt a:hover {
     background-color: #5b2217; 
 }
+
+/* Bookmark Success Message*/
+.success-message {
+    background-color: #e6f5e6;           
+    border: 1px solid #6eb36e;    
+    color: #3d713d;                
+    font-family: 'Brygada 1918', serif;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    width: fit-content;
+    margin: 15px auto;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    animation: fadeOut 3s ease-in forwards;
+}
+

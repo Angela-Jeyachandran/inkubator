@@ -13,6 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (isset($users[$username]) && password_verify($password, $users[$username]['password'])) {
         $_SESSION['username'] = $username;
+        $_SESSION['role'] = $users[$username]['role'] ?? 'client';
         header('Location: user_dashboard.php');
         exit;
     } else {

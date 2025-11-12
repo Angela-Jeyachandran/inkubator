@@ -7,7 +7,7 @@ session_start();
 // echo "<p>DEBUG SESSION: " . ($_SESSION['username'] ?? 'NONE') . "</p>";
 
 // If not logged in goes to home page
-if (!isset($_SESSION['username'])) {
+if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'client') {
     header('Location: index.html');
     exit;
 }

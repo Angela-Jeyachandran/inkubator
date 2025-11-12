@@ -34,7 +34,7 @@ if (file_exists($bookmarksFile)) {
 <body>
 <header class="dashboard-header">
     <div class="logout_btn">
-        <form action="user_logout.php">
+        <form action="logout.php">
             <button class="logout_btn" type="submit">Logout</button>
         </form>
     </div>
@@ -46,7 +46,7 @@ if (file_exists($bookmarksFile)) {
     <nav class="main-nav">
     <a href="about.html">About</a>
     <a href="tattoo_search.php">Find Your Next Ink</a>
-    <a href="#">Messages</a>
+    <!--<a href="#">Messages</a>-->
 </nav>
 </header>
 

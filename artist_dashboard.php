@@ -3,6 +3,7 @@
 ini_set('session.cookie_path', '/');
 session_name('inkubator_session');
 session_start();
+
 if (!isset($_SESSION['username'])) {
     header('Location: login.php');
     exit;
@@ -65,7 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['image'])) {
    </head>
     <header>
         <div class="logout_btn">
-            <form action="user_logout.php">
+            <form action="logout.php">
                 <button class="logout_btn" type="submit">Logout</button>
             </form>
         </div>
@@ -75,8 +76,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['image'])) {
 
         <nav class="main-nav">
             <a href="about.html">About</a>
-            <a href="tattoo_search.php">Find Your Next Ink</a>
-            <a href="#">Messages</a>
+            <a href="tattoo_search.php">Browse Uploaded Designs</a>
+            <!--<a href="#">Messages</a>-->
         </nav>
     </header>
 </br>

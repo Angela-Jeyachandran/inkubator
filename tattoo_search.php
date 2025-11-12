@@ -4,10 +4,11 @@ ini_set('session.cookie_path', '/');
 session_name('inkubator_session');
 session_start();
 
-echo "<pre>";
-print_r($_SESSION);
-echo "</pre>";
-// Debug statement
+// Debug statements
+//echo "<pre>";
+//print_r($_SESSION);
+//echo "</pre>";
+
 // echo "<p>DEBUG SESSION: " . ($_SESSION['username'] ?? 'NONE') . "</p>";
 
 $metaFile = 'uploads/meta.json';
@@ -69,7 +70,7 @@ if (!empty($queries) && !empty($metaData)) {
         <div class="logout_btn">
             <?php if (isset($_SESSION['role']) && in_array($_SESSION['role'], ['client', 'artist'])): ?>
             <!-- Show logout button if user is logged in -->
-            <form action="user_logout.php" method="post">
+            <form action="logout.php" method="post">
                 <button class="logout_btn" type="submit">Logout</button>
             </form>
             <?php endif; ?>
@@ -79,11 +80,11 @@ if (!empty($queries) && !empty($metaData)) {
         <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'client'): ?>
             <!-- Client nav -->
             <a href="user_dashboard.php">Dashboard</a>
-            <a href="#">Messages</a>
+            <!--<a href="#">Messages</a>-->
         <?php elseif (isset($_SESSION['role']) && $_SESSION['role'] === 'artist'): ?>
             <!-- Artist nav -->
             <a href="artist_dashboard.php">Dashboard</a>
-            <a href="#">Messages</a>
+            <!--<a href="#">Messages</a>-->
         <?php else: ?>
             <!-- Guest nav -->
             <a href="index.html">Home</a>

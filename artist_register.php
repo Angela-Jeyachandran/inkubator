@@ -25,12 +25,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             } else {
                 $users[$username] = [
                     'password' => password_hash($password, PASSWORD_DEFAULT),
-                    'email' => $email,
-                    'role' => 'artist'
+                    'email' => $email
                 ];
                 file_put_contents($usersFile, json_encode($users, JSON_PRETTY_PRINT));
                 $_SESSION['username'] = $username;
-                $_SESSION['role'] = 'artist';
+                $_SESSION['role'] = 'artist',
                 header('Location: artist_dashboard.php');
                 exit;
             }

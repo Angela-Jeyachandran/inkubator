@@ -3,11 +3,7 @@
 ini_set('session.cookie_path', '/');
 session_name('inkubator_session');
 session_start();
-
-echo "<pre>";
-print_r($_SESSION);
-echo "</pre>";
-if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'artist') {
+if (!isset($_SESSION['username'])) {
     header('Location: login.php');
     exit;
 }

@@ -1,5 +1,9 @@
 <?php
+// Keeps session consistent across the pages
+ini_set('session.cookie_path', '/');
+session_name('inkubator_session');
 session_start();
+
 $usersFile = 'users.json';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -21,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             } else {
                 $users[$username] = [
                     'password' => password_hash($password, PASSWORD_DEFAULT),
-                    'email' => $email
+                    'email' => $email,
                     'role' => 'artist'
                 ];
                 file_put_contents($usersFile, json_encode($users, JSON_PRETTY_PRINT));

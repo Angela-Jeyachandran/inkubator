@@ -46,7 +46,7 @@ if (file_exists($bookmarksFile)) {
     <nav class="main-nav">
     <a href="about.html">About</a>
     <a href="tattoo_search.php">Find Your Next Ink</a>
-    <a href="logout.php">Messages</a>
+    <a href="#">Messages</a>
 </nav>
 </header>
 

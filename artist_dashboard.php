@@ -1,5 +1,12 @@
 <?php
+// Keeps session consistent across the pages
+ini_set('session.cookie_path', '/');
+session_name('inkubator_session');
 session_start();
+
+echo "<pre>";
+print_r($_SESSION);
+echo "</pre>";
 if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'artist') {
     header('Location: login.php');
     exit;
@@ -73,7 +80,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['image'])) {
         <nav class="main-nav">
             <a href="about.html">About</a>
             <a href="tattoo_search.php">Find Your Next Ink</a>
-            <a href="logout.php">Messages</a>
+            <a href="#">Messages</a>
         </nav>
     </header>
 </br>

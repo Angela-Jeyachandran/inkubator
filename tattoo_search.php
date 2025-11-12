@@ -3,6 +3,10 @@
 ini_set('session.cookie_path', '/');
 session_name('inkubator_session');
 session_start();
+
+echo "<pre>";
+print_r($_SESSION);
+echo "</pre>";
 // Debug statement
 // echo "<p>DEBUG SESSION: " . ($_SESSION['username'] ?? 'NONE') . "</p>";
 
@@ -63,7 +67,7 @@ if (!empty($queries) && !empty($metaData)) {
 <body>
     <header>
         <div class="logout_btn">
-            <?php if (isset($_SESSION['username'])): ?>
+            <?php if (isset($_SESSION['role']) && in_array($_SESSION['role'], ['client', 'artist'])): ?>
             <!-- Show logout button if user is logged in -->
             <form action="user_logout.php" method="post">
                 <button class="logout_btn" type="submit">Logout</button>
@@ -72,13 +76,16 @@ if (!empty($queries) && !empty($metaData)) {
         </div>
         <img src="inkubator_logo.png" alt="logo" width="350" height="100">
         <nav class="main-nav">
-        <?php if (isset($_SESSION['username'])): ?>
-            <!-- Logged-in user nav bar -->
+        <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'client'): ?>
+            <!-- Client nav -->
             <a href="user_dashboard.php">Dashboard</a>
-            <a href="messages.php">Messages</a>
-            <a href="user_logout.php">Logout</a>
+            <a href="#">Messages</a>
+        <?php elseif (isset($_SESSION['role']) && $_SESSION['role'] === 'artist'): ?>
+            <!-- Artist nav -->
+            <a href="artist_dashboard.php">Dashboard</a>
+            <a href="#">Messages</a>
         <?php else: ?>
-            <!-- Guest user nav bar -->
+            <!-- Guest nav -->
             <a href="index.html">Home</a>
             <a href="login_options.html">Login</a>
             <a href="register_options.html">Register</a>

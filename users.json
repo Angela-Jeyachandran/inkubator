@@ -17,10 +17,12 @@
     },
     "artist": {
         "password": "$2y$12$6zlRymJ7TrzVzhe7Nrgaa.CJyAaEgVaiS6lz1Ksq4y2CpKdilXFvm",
-        "email": "artist@gmail.com"
+        "email": "artist@gmail.com",
+        "role": "artist"
     },
     "client": {
         "password": "$2y$12$SGZe4QJVdnFCfeJxEyQeJ.aRzupU0J5c9ILBprnyAOgYJE2Xzoswq",
-        "email": "client@gmail.com"
+        "email": "client@gmail.com",
+        "role": "client"
     }
 }

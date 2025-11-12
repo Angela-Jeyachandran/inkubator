@@ -10,6 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (isset($users[$username]) && password_verify($password, $users[$username]['password'])) {
         $_SESSION['username'] = $username;
+        $_SESSION['role'] = $users[$username]['role'] ?? 'artist';
         header('Location: artist_dashboard.php');
         exit;
     } else {
@@ -19,10 +20,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 <!DOCTYPE html>
 <html lang="en">
-   <head>
+    <head>
     <link rel="stylesheet" href="styles.css?v=4">
     <title>Artist Login</title>
-   </head>
+    </head>
     <header>
         <h1>Artist Login</h1> 
     </header>

@@ -29,7 +29,7 @@ img {
 
 }
 
-.logout_btn {
+.logout_btn, .login_btn {
     text-align: left;    
     margin: 0;           
     width: fit-content;  
@@ -253,4 +253,28 @@ img {
     width: 100%;
     max-width: 200px;
     border-radius: 8px;
+}
+
+
+.login-prompt {
+    text-align: center;
+    margin-top: 8px;
+}
+
+.login-prompt a {
+    display: inline-block;
+    background-color: #863525;    
+    color: white;                
+    font-family: 'Brygada 1918', serif;
+    font-size: 15px;
+    border: none;
+    padding: 5px 10px; 
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.login-prompt a:hover {
+    background-color: #5b2217; 
 }

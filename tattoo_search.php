@@ -6,12 +6,6 @@ session_start();
 // Debug statement
 // echo "<p>DEBUG SESSION: " . ($_SESSION['username'] ?? 'NONE') . "</p>";
 
-// If not logged in goes to home page
-if (!isset($_SESSION['username'])) {
-    header('Location: index.html');
-    exit;
-}
-
 $metaFile = 'uploads/meta.json';
 $results = [];
 $queryRaw = isset($_GET['q']) ? $_GET['q'] : '';
@@ -69,16 +63,28 @@ if (!empty($queries) && !empty($metaData)) {
 <body>
     <header>
         <div class="logout_btn">
+            <?php if (isset($_SESSION['username'])): ?>
+            <!-- Show logout button if user is logged in -->
             <form action="user_logout.php" method="post">
                 <button class="logout_btn" type="submit">Logout</button>
             </form>
+            <?php endif; ?>
         </div>
         <img src="inkubator_logo.png" alt="logo" width="350" height="100">
         <nav class="main-nav">
-            <a href="about.html">About</a>
+        <?php if (isset($_SESSION['username'])): ?>
+            <!-- Logged-in user nav bar -->
             <a href="user_dashboard.php">Dashboard</a>
-            <a href="logout.php">Messages</a>
+            <a href="messages.php">Messages</a>
+            <a href="user_logout.php">Logout</a>
+        <?php else: ?>
+            <!-- Guest user nav bar -->
+            <a href="index.html">Home</a>
+            <a href="login_options.html">Login</a>
+            <a href="register_options.html">Register</a>
+        <?php endif; ?>
         </nav>
+
         <h1>Find Your Next Ink</h1>
     </header>
 
@@ -102,11 +108,20 @@ if (!empty($queries) && !empty($metaData)) {
                         <img src="uploads/<?php echo htmlspecialchars($item['filename'], ENT_QUOTES); ?>" alt="">
                         <p><strong>By:</strong> <?php echo isset($item['username']) ? htmlspecialchars($item['username']) : 'Unknown'; ?></p>
                         <p><strong>Keywords:</strong> <?php echo htmlspecialchars(implode(', ', $item['keywords']), ENT_QUOTES); ?></p>
-                        <!-- Bookmarking -->
-                        <form action="bookmark.php" method="POST">
-                            <input type="hidden" name="filename" value="<?php echo htmlspecialchars($item['filename'], ENT_QUOTES); ?>">
-                            <button type="submit">Bookmark</button>
-                        </form>
+                        <!-- Logged-in user Bookmarking -->
+                        <?php if (isset($_SESSION['username'])): ?>
+                            <form action="bookmark.php" method="POST">
+                                <input type="hidden" name="filename" value="<?php echo htmlspecialchars($item['filename'], ENT_QUOTES); ?>">
+                                <button type="submit">Bookmark</button>
+                            </form>
+                        <!-- Guest Browsing -->
+                        <?php else: ?>
+                            <p class="login-prompt">
+                            <a href="login.php" class = "button">Login or create an account</a> 
+                            <br>
+                            to bookmark this design.
+                            </p>
+                        <?php endif; ?>
                     </div>
                 <?php endforeach; ?>
             </div>

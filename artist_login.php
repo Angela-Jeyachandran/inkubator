@@ -46,13 +46,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <br>
             <button type="submit">Login</button>
             <br>
-            <label>
-                <input type="checkbox" name="remember"> Remember me
-            </label>
-        </div>
-
-        <div class="container">
-            <span class="pass"><a href="#">Forgot password?</a></span>
         </div>
     </form>
 </body>

@@ -90,6 +90,7 @@ if (!empty($queries) && !empty($metaData)) {
             <a href="index.html">Home</a>
             <a href="login_options.html">Login</a>
             <a href="register_options.html">Register</a>
+            <a href="about.html">About</a>
         <?php endif; ?>
         </nav>
 

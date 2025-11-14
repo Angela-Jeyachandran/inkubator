@@ -74,8 +74,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['image'])) {
 
         <h1><?php echo htmlspecialchars($_SESSION['username']); ?>'s Dashboard</h1> 
 
-        <nav class="main-nav">
-            <a href="about.html">About</a>
+        <nav class="main-nav">    
             <a href="tattoo_search.php">Browse Uploaded Designs</a>
             <!--<a href="#">Messages</a>-->
         </nav>

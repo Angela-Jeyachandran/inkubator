@@ -44,7 +44,6 @@ if (file_exists($bookmarksFile)) {
     <p><?php echo count($bookmarked); ?> saved tattoos</p>
 
     <nav class="main-nav">
-    <a href="about.html">About</a>
     <a href="tattoo_search.php">Find Your Next Ink</a>
     <!--<a href="#">Messages</a>-->
 </nav>

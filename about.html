@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
-    <link rel="stylesheet" href="styles.css?v=4">
-    <title>About</title>
+        <link rel="stylesheet" href="styles.css?v=4">
+        <title>About</title>
+   </head>
+
+<body>  
     <header>
         <div class="logout_btn">
             <form action="logout.php">
@@ -15,14 +18,11 @@
 
         <nav class="main-nav">
             <a href="about.html">About</a>
-            <a href="tattoo_search.php">Browse Uploaded Designs</a>
+            <a href="tattoo_search.php">Explore Tattoos</a>
             <!--<a href="#">Messages</a>-->
         </nav>
-
-   </head>
-
-<body>  
-    <div class="about"
+    </header>
+    <div class="about">
         <p><b>Inkubator</b> is a web application that helps users find inspiration for 
             their next tattoo while supporting artists directly. The user can 
             discover new tattoo designs based on keyword searches, bookmark their 
@@ -51,17 +51,25 @@
             bottom of their dashboard. They also have the option to “Browse Uploaded 
             Designs” to look at the system from the user’s perspective or get inspiration 
             themselves.
+            </p>
+        </div>
+            <div class="abt_img"><img src="user_flow.png" alt="user flow diagram" 
+                width="1000px" height="800px"></div>
+            <div class="abt_img"><img src="wireframe.png" alt="wireframe" 
+                width="1000px" height="500px"></div>
+        <div class="about">
+            <p>
             <br><br><br>
             <h3>Development Process</h3>
             Inkubator’s development process began with a wireframe designed in Figma 
             to guide our vision and to create a starting point for the website’s 
-            identity. A GitHub repository was then set up and used for version control 
-            and collaboration. This helped manage changes, track progress, and maintain 
-            backups throughout the development process. The project was built in Visual 
-            Studio Code with HTML, CSS, and JavaScript for the design and functionality 
-            and JSON for storing data. The backend uses PHP sessions to maintain login 
-            states and ensure each account type has access to the correct features. It 
-            was then tested to check for all user pathways and later transferred to 
+            identity. A <a href="https://github.com/Angela-Jeyachandran/inkubator/tree/main" target="_blank">GitHub repository</a> 
+            was then set up and used for version control and collaboration. This helped manage 
+            changes, track progress, and maintain backups throughout the development process. 
+            The project was built in Visual Studio Code with HTML, CSS, and JavaScript for the 
+            design and functionality and JSON for storing data. The backend uses PHP sessions 
+            to maintain login states and ensure each account type has access to the correct features. 
+            It was then tested to check for all user pathways and later transferred to 
             TinkerHost for web hosting. 
             <br><br><br>
             <h3>Data and Storage</h3>
@@ -94,19 +102,24 @@
             If you would like to view the application from the perspective of the <b>client</b> 
             use:
             <br>
-            <b>Username</b>: <i>client</i>
-            <br>
-            <b>Password</b>: <i>client</i>
+            <span class="highlight">
+                <b>Username</b>: <i>client</i>
+                <br>
+                <b>Password</b>: <i>client</i>
+            </span>
             <br><br>
             If you would like to view the application from the perspective of the <b>artist</b> use:
             <br>
-            <b>Username</b>: <i>artist</i>
-            <br>
-            <b>Password</b>: <i>artist</i>
+            <span class="highlight">
+                <b>Username</b>: <i>artist</i>
+                <br>
+                <b>Password</b>: <i>artist</i>
+            </span>
             <br><br><br>
             <h3>Creators</h3>
             Alyssa Beth Luna & Angela Jeyachandran
         </p>
+        </div>
     </div>
 </body>
 

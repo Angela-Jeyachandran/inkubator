@@ -29,6 +29,13 @@ img {
 
 }
 
+.abt_img img {
+    display: block;
+    margin: 20px auto;   /* center images */
+    max-width: 100%;     /* prevent overflow */
+    height: auto;
+}
+
 .logout_btn, .login_btn {
     text-align: left;    
     margin: 0;           
@@ -73,6 +80,15 @@ body form {
 .about {
     text-align: left;
     margin-top: 30px;
+    max-width: 700px;
+    margin: 0 auto 1.5rem auto; /* center + spacing */
+    line-height: 1.6;
+}
+
+.highlight {
+    background-color: rgb(239, 239, 143);
+    padding: 2px 4px;
+    box-shadow: 0 0 4px #fffd54;
 }
 
 .btn_log {

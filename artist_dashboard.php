@@ -9,9 +9,8 @@ if (!isset($_SESSION['username'])) {
     exit;
 }
 
-$uploadDir = 'uploads/';
+$uploadDir = $_SERVER['DOCUMENT_ROOT'] . '/uploads/';
 
-// may not need this? 
 if (!is_dir($uploadDir)) {
     mkdir($uploadDir, 0755, true);
 }
@@ -34,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['image'])) {
                 
                 // keywords
                 $keywords = trim($_POST['keywords']);
-                $metaFile = 'uploads/meta.json';
+                $metaFile = $_SERVER['DOCUMENT_ROOT'] . '/uploads/meta.json';
                 $metaData = file_exists($metaFile) ? json_decode(file_get_contents($metaFile), true) : [];
 
                 $metaData[] = [

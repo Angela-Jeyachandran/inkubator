@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 ];
                 file_put_contents($usersFile, json_encode($users, JSON_PRETTY_PRINT));
                 $_SESSION['username'] = $username;
-                $_SESSION['role'] = 'client',
+                $_SESSION['role'] = 'client';
                 header('Location: user_dashboard.php');
                 exit;
             }

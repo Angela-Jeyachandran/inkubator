@@ -11,7 +11,7 @@ populate on their dashboard and they have the option to remove tattoos from thei
 can upload an image along with key words to help the designs be found by the users. The uploaded designs can be seen at the bottom of their dashboard. They also have the option to 
 “Browse Uploaded Designs” to look at the system from the user’s perspective or get inspiration themselves.
 ### Testing
-To see how this application works we have created an artist user and a client user for you to test the functionality.
+To see how this application works we have created an artist user and a client user for you to test the functionality. Just follow [this link](http://inkubator.thsite.top/index.html) and enter either of the credentials below at the login.
 
 If you would like to view the application from the perspective of the **client** use:
 
